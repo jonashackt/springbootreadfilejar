@@ -31,6 +31,22 @@ Now the Path is magically looking like
 jar:file:/C:/dev/temp/springbootreadfilejar/target/springbootreadfilejar-0.0.1-SNAPSHOT.jar!/files/homepage-feature-projects.png
 ```
 
+### But that´s all to much effort!
+
+Because you can just use org.springframework.core.io.Resource with @Value-Annotation - and all the Stuff is handled by Spring for you!
+
+Look at the second Method inside [FileReader-Class] and run the second test. Just
+
+```sh
+@Value("classpath:files/homepage-feature-projects.png")
+private Resource file;
+
+file.getInputStream();
+```
+
+That´s it.
+
 [Issue]:http://stackoverflow.com/questions/25032716/getting-filesystemnotfoundexception-from-zipfilesystemprovider-when-creating-a-p
 [Oracle]:http://docs.oracle.com/javase/7/docs/technotes/guides/io/fsp/zipfilesystemprovider.html
 [Postman]:https://www.getpostman.com/
+[FileReader-Class]:https://github.com/jonashackt/springbootreadfilejar/blob/master/src/main/java/de/jonashackt/file/FileReader.java

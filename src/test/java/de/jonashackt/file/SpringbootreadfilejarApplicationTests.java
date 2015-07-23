@@ -20,4 +20,10 @@ public class SpringbootreadfilejarApplicationTests {
 		fileReader.readFiles();
 		assertTrue("File reading successfull", true);
 	}
+	
+	@Test
+	public void loadFileWithSpring() {
+		fileReader.readFilesWithSpringResource();
+		assertTrue("File reading successfull", true);
+	}
 }

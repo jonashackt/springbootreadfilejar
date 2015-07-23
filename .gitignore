@@ -11,6 +11,7 @@
 .classpath
 .studio
 target
+bin
 
 # Apple # 
 .DS_Store
